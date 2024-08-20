@@ -1,58 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.heade {
+  background: linear-gradient(white, rgb(118, 118, 242), rgb(50, 6, 225));
+}
+
 .logo {
   height: 10vh;
   width: 10vh;
   border-radius: 80px;
 }
-.heade {
-  background: linear-gradient(white, rgb(118, 118, 242), rgb(50, 6, 225));
-}
+
 .img1 {
   height: 50vh;
   background-image: url("https://as2.ftcdn.net/v2/jpg/04/85/27/87/1000_F_485278735_wyrqqhjoESSBunQK9uPLINR2Zuh9MkdK.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .about-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
 .about {
   flex: 1;
-  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .about-image {
-  max-width: 200px;
+  max-width: 100%;
   height: auto;
-}
-p {
-  text-indent: 20px;
+  margin-bottom: 20px;
+  height: 10vh;
+  width: 10vh;
 }
 
 .ser {
   border-style: hidden;
   border-color: black;
   padding: 20px;
-  width: 30vh;
+  width: 100%;
+  max-width: 90vh;
   border-radius: 10px;
   background-color: white;
+  margin-bottom: 20px;
 }
 
 .services {
   background-color: skyblue;
 }
+
 .full {
   background-color: skyblue;
-  padding: 30px;
+  padding: 30px 10px;
 }
+
 .simg {
   height: 20vh;
 }
+
 form {
-  max-width: 600px;
+  max-width: 90%;
   margin: 0 auto;
+}
+
+.box {
+  border-style: solid;
+  border-color: white;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px;
 }
 
 form input[type="text"],
@@ -79,14 +104,15 @@ form button {
 form button:hover {
   background-color: #45a049;
 }
+
 .comment label {
-  flex-basis: 30%; /* Adjusts the width of the label */
+  flex-basis: 30%;
   text-align: left;
   padding-right: 10px;
 }
 
 .comment input {
-  flex-basis: 80%; /* Adjusts the width of the input */
+  flex-basis: 80%;
   padding: 5px;
   box-sizing: border-box;
 }
@@ -97,23 +123,60 @@ form button:hover {
   margin-top: 10px;
   cursor: pointer;
 }
+
 .footer {
   text-align: center;
   background-color: grey;
-  height: 25vh;
-  padding-top: 4vh;
+  padding: 20px 0;
 }
+
 .foot {
   background-color: black;
-
   color: white;
+  padding: 10px;
 }
+
 .serimg {
   height: 7vh;
-  margin-left: 40%;
+  margin: 0 auto;
+  display: block;
 }
-@media screen and (max-width: 1720px) {
+
+@media screen and (max-width: 768px) {
+  .navbar-brand img {
+    height: 8vh;
+    width: 8vh;
+  }
+
+  .navbar h2 {
+    font-size: 1.2em;
+    margin-left: 10px;
+  }
+
+  .img1 {
+    height: 30vh;
+    background-position: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ser {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .serimg {
+    height: 5vh;
+  }
+
+  .footer {
+    padding: 10px 0;
+  }
+
   .full {
-    padding: 25vh;
+    padding: 20px 10px;
   }
 }
